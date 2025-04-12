@@ -1,0 +1,165 @@
+.
+├── README.md
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   └── lt
+│       │       └── vu
+│       │           ├── entities
+│       │           │   ├── Player.java
+│       │           │   └── Team.java
+│       │           ├── interceptors
+│       │           │   ├── LoggedInvocation.java
+│       │           │   └── MethodLogger.java
+│       │           ├── mybatis
+│       │           │   ├── dao
+│       │           │   │   ├── PlayerMapper.java
+│       │           │   │   └── TeamMapper.java
+│       │           │   └── model
+│       │           │       ├── Player.java
+│       │           │       └── Team.java
+│       │           ├── persistence
+│       │           │   ├── MyBatisResources.java
+│       │           │   ├── PlayersDAO.java
+│       │           │   ├── Resources.java
+│       │           │   └── TeamsDAO.java
+│       │           ├── rest
+│       │           │   ├── ApiConfiguration.java
+│       │           │   ├── PlayersController.java
+│       │           │   └── contracts
+│       │           │       └── PlayerDto.java
+│       │           ├── services
+│       │           │   └── JerseyNumberGenerator.java
+│       │           └── usecases
+│       │               ├── GeneratePlayerJerseyNumber.java
+│       │               ├── PlayersForTeam.java
+│       │               ├── Teams.java
+│       │               ├── TeamsMyBatis.java
+│       │               └── UpdatePlayerDetails.java
+│       ├── resources
+│       │   ├── META-INF
+│       │   │   └── persistence.xml
+│       │   ├── MyBatisConfig.xml
+│       │   ├── generatorConfig.xml
+│       │   └── mybatis.xml
+│       │       ├── PlayerMapper.xml
+│       │       └── TeamMapper.xml
+│       └── webapp
+│           ├── WEB-INF
+│           │   ├── beans.xml
+│           │   ├── players-ds.xml
+│           │   ├── resources.xml
+│           │   └── web.xml
+│           ├── index.xhtml
+│           ├── myBatis
+│           │   ├── players.xhtml
+│           │   └── teams.xhtml
+│           ├── playerDetails.xhtml
+│           └── players.xhtml
+├── target
+│   ├── classes
+│   │   ├── META-INF
+│   │   │   └── persistence.xml
+│   │   ├── MyBatisConfig.xml
+│   │   ├── generatorConfig.xml
+│   │   ├── lt
+│   │   │   └── vu
+│   │   │       ├── entities
+│   │   │       │   ├── Player.class
+│   │   │       │   └── Team.class
+│   │   │       ├── interceptors
+│   │   │       │   ├── LoggedInvocation.class
+│   │   │       │   └── MethodLogger.class
+│   │   │       ├── mybatis
+│   │   │       │   ├── dao
+│   │   │       │   │   ├── PlayerMapper.class
+│   │   │       │   │   └── TeamMapper.class
+│   │   │       │   └── model
+│   │   │       │       ├── Player.class
+│   │   │       │       └── Team.class
+│   │   │       ├── persistence
+│   │   │       │   ├── MyBatisResources.class
+│   │   │       │   ├── PlayersDAO.class
+│   │   │       │   ├── Resources.class
+│   │   │       │   └── TeamsDAO.class
+│   │   │       ├── rest
+│   │   │       │   ├── ApiConfiguration.class
+│   │   │       │   ├── PlayersController.class
+│   │   │       │   └── contracts
+│   │   │       │       └── PlayerDto.class
+│   │   │       ├── services
+│   │   │       │   └── JerseyNumberGenerator.class
+│   │   │       └── usecases
+│   │   │           ├── GeneratePlayerJerseyNumber.class
+│   │   │           ├── PlayersForTeam.class
+│   │   │           ├── Teams.class
+│   │   │           ├── TeamsMyBatis.class
+│   │   │           └── UpdatePlayerDetails.class
+│   │   └── mybatis.xml
+│   │       ├── PlayerMapper.xml
+│   │       └── TeamMapper.xml
+│   ├── generated-sources
+│   │   └── annotations
+│   └── java-ee-practice
+│       ├── META-INF
+│       │   └── MANIFEST.MF
+│       ├── WEB-INF
+│       │   ├── beans.xml
+│       │   ├── classes
+│       │   │   ├── META-INF
+│       │   │   │   └── persistence.xml
+│       │   │   ├── MyBatisConfig.xml
+│       │   │   ├── generatorConfig.xml
+│       │   │   ├── lt
+│       │   │   │   └── vu
+│       │   │   │       ├── entities
+│       │   │   │       │   ├── Player.class
+│       │   │   │       │   └── Team.class
+│       │   │   │       ├── interceptors
+│       │   │   │       │   ├── LoggedInvocation.class
+│       │   │   │       │   └── MethodLogger.class
+│       │   │   │       ├── mybatis
+│       │   │   │       │   ├── dao
+│       │   │   │       │   │   ├── PlayerMapper.class
+│       │   │   │       │   │   └── TeamMapper.class
+│       │   │   │       │   └── model
+│       │   │   │       │       ├── Player.class
+│       │   │   │       │       └── Team.class
+│       │   │   │       ├── persistence
+│       │   │   │       │   ├── MyBatisResources.class
+│       │   │   │       │   ├── PlayersDAO.class
+│       │   │   │       │   ├── Resources.class
+│       │   │   │       │   └── TeamsDAO.class
+│       │   │   │       ├── rest
+│       │   │   │       │   ├── ApiConfiguration.class
+│       │   │   │       │   ├── PlayersController.class
+│       │   │   │       │   └── contracts
+│       │   │   │       │       └── PlayerDto.class
+│       │   │   │       ├── services
+│       │   │   │       │   └── JerseyNumberGenerator.class
+│       │   │   │       └── usecases
+│       │   │   │           ├── GeneratePlayerJerseyNumber.class
+│       │   │   │           ├── PlayersForTeam.class
+│       │   │   │           ├── Teams.class
+│       │   │   │           ├── TeamsMyBatis.class
+│       │   │   │           └── UpdatePlayerDetails.class
+│       │   │   └── mybatis.xml
+│       │   │       ├── PlayerMapper.xml
+│       │   │       └── TeamMapper.xml
+│       │   ├── lib
+│       │   │   ├── h2-1.4.196.jar
+│       │   │   ├── mybatis-3.5.3.jar
+│       │   │   └── mybatis-cdi-1.1.1.jar
+│       │   ├── players-ds.xml
+│       │   ├── resources.xml
+│       │   └── web.xml
+│       ├── index.xhtml
+│       ├── myBatis
+│       │   ├── players.xhtml
+│       │   └── teams.xhtml
+│       ├── playerDetails.xhtml
+│       └── players.xhtml
+└── tree.txt
+
+60 directories, 103 files
